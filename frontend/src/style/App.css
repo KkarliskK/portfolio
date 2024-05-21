@@ -4,4 +4,16 @@
   padding: 2;
 }
 
+body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 37, 41);
+  font-family: Inter, sans-serif;
+}
+
+body.dark{
+  background-color: rgb(17, 42, 70);
+  color: rgb(172, 200, 229)
+}
+
+
 
