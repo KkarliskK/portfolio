@@ -11,3 +11,65 @@
     }
   }
 
+.tickiffy_container,
+.memorius_container,
+.coffe_container
+{
+  overflow: hidden;
+  position: relative;
+}
+
+.tickiffy_title,
+.memorius_title,
+.coffe_title
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.3s ease-in-out;
+}
+
+.tickiffy_description,
+.memorius_description,
+.coffe_description
+{
+  position: absolute;
+  top: -100%; /* Initially placed outside of the visible area */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* Initially hidden */
+  transition: all 0.3s ease-in-out;
+}
+
+.tickiffy_container:hover .tickiffy_title {
+  top: 10%; /* Moves up when hovered */
+}
+
+.tickiffy_container:hover .tickiffy_description {
+  top: 50%; /* Moves into view when hovered */
+  opacity: 1; /* Makes description visible */
+}
+
+.memorius_container:hover .memorius_title {
+  top: 10%; /* Moves up when hovered */
+}
+
+.memorius_container:hover .memorius_description {
+  top: 50%; /* Moves into view when hovered */
+  opacity: 1; /* Makes description visible */
+}
+
+.coffe_container:hover .coffe_title {
+  top: 10%; /* Moves up when hovered */
+}
+
+.coffe_container:hover .coffe_description {
+  top: 50%; /* Moves into view when hovered */
+  opacity: 1; /* Makes description visible */
+}
+
+
+.languages_container{
+  background-color: rgba(0, 0, 0, 0.2);
+}
