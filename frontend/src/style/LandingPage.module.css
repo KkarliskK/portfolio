@@ -43,11 +43,11 @@
 }
 
 .tickiffy_container:hover .tickiffy_title {
-  top: 10%; /* Moves up when hovered */
+  top: 20%; /* Moves up when hovered */
 }
 
 .tickiffy_container:hover .tickiffy_description {
-  top: 50%; /* Moves into view when hovered */
+  top: 40%; /* Moves into view when hovered */
   opacity: 1; /* Makes description visible */
 }
 
@@ -56,16 +56,16 @@
 }
 
 .memorius_container:hover .memorius_description {
-  top: 50%; /* Moves into view when hovered */
+  top: 25%; /* Moves into view when hovered */
   opacity: 1; /* Makes description visible */
 }
 
 .coffe_container:hover .coffe_title {
-  top: 10%; /* Moves up when hovered */
+  top: 24%; /* Moves up when hovered */
 }
 
 .coffe_container:hover .coffe_description {
-  top: 50%; /* Moves into view when hovered */
+  top: 45%; /* Moves into view when hovered */
   opacity: 1; /* Makes description visible */
 }
 
