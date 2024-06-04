@@ -31,7 +31,7 @@ function LandingPage() {
             </div>
             <div className={`flex w-2/6 h-full mr-16`}> {/****Show my latest projects*****/}
               <div className={`flex flex-col w-full`}>{/*****Kreisa puse*****/}
-                <div className={`flex justify-center items-center shadow-md h-full m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.tickiffy_container}`}>
+                <div className={`flex justify-center items-center h-full m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.tickiffy_container}`}>
                   <h1 className={`text-4xl font-semibold ${css.tickiffy_title}`}>Tickiffy</h1>
                   <p className={`w-4/5 ${css.tickiffy_description}`}>Ticket shop! In my opinion, one of the hardest projects, because all of that backend that was put in to it. </p>
                   <div className={`absolute bottom-0 flex justify-center items-center w-full p-1 ${css.languages_container}`}>
@@ -44,7 +44,7 @@ function LandingPage() {
                 </div>
               </div>
               <div className={`flex flex-col w-full`}>{/*****Laba puse*****/}
-                <div className={`flex flex shadow-md h-full m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.memorius_container}`}>
+                <div className={`flex flex h-full m-2 transition duration-300 ease-in-out hover:shadow-xl ${css.memorius_container}`}>
                   <h1 className={`text-4xl font-semibold ${css.memorius_title}`}>Memorius</h1>
                   <p className={`w-4/5 ${css.memorius_description}`}>My first game project! A simple match 2 card game!</p>
                   <div className={`absolute bottom-0 flex justify-center items-center w-full p-1 ${css.languages_container}`}>
@@ -56,8 +56,8 @@ function LandingPage() {
                     <div className={`flex ${css.tailwind}`}><p className={`text-2xl m-1`}><RiTailwindCssFill /></p></div>
                   </div>
                 </div>
-                <div className={`flex flex shadow-md h-full m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.coffe_container}`}>
-                  <h1 className={`text-4xl font-semibold ${css.coffe_title}`}>Coffee shop</h1>
+                <div className={`flex flex h-full m-2 transition duration-300 ease-in-out hover:shadow-xl ${css.coffe_container}`}>
+                  <h1 className={`text-4xl font-semibold  ${css.coffe_title}`}>Coffee shop</h1>
                   <p className={`w-4/5 ${css.coffe_description}`}>Coffee time - a front end project.</p>
                   <div className={`absolute bottom-0 flex justify-center items-center w-full p-1 ${css.languages_container}`}>
                     <div className={`flex ${css.html}`}><p className={`text-2xl m-1`}><FaHtml5 /></p></div>
