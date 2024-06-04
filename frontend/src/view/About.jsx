@@ -4,7 +4,7 @@ import Font, { Text } from 'react-font'
 function About() {
     return (
       <>
-      
+        <div></div>
       </>
     )
 }
