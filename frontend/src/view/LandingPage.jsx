@@ -6,6 +6,7 @@ import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
 import About from '../view/About';
 import Contact from '../view/Contact';
+import Achievements from '../view/Certificate';
 
 
 function LandingPage() {
@@ -77,6 +78,7 @@ function LandingPage() {
         </div>
 
         <About />
+        <Achievements />
         <Contact />
     </>
   )
