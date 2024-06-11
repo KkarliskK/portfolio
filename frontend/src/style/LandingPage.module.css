@@ -12,6 +12,7 @@
   }
 
 .tickiffy_container,
+.about_container,
 .memorius_container,
 .coffe_container
 {
@@ -47,6 +48,15 @@
   top: 20%; /* Moves up when hovered */
 }
 
+.about_container:hover .tickiffy_title {
+  top: 20%; /* Moves up when hovered */
+}
+
+.about_container:hover .tickiffy_description {
+  top: 40%; /* Moves into view when hovered */
+  opacity: 1; /* Makes description visible */
+}
+
 .tickiffy_container:hover .tickiffy_description {
   top: 40%; /* Moves into view when hovered */
   opacity: 1; /* Makes description visible */
@@ -74,3 +84,4 @@
 .languages_container{
   background-color: rgba(0, 0, 0, 0.2);
 }
+
