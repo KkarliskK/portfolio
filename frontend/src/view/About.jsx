@@ -13,7 +13,7 @@ function About() {
     // Set the heights at which each div will start to show
     let firstHeightToShowFrom = 550;
     let secondHeightToShowFrom = 750;
-    let thirdHeightToShowFrom = 950;
+    let thirdHeightToShowFrom = 900;
     
     if (winScroll > firstHeightToShowFrom) {
       setFirstVisible(true);

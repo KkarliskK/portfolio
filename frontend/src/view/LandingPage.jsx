@@ -5,6 +5,7 @@ import { FaCss3Alt, FaHtml5, FaLaravel, FaPhp, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
 import About from '../view/About';
+import Contact from '../view/Contact';
 
 
 function LandingPage() {
@@ -33,7 +34,7 @@ function LandingPage() {
               <div className={`flex flex-col w-full`}>{/*****Kreisa puse*****/}
                 <div className={`flex justify-center items-center h-full m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.tickiffy_container}`}>
                   <h1 className={`text-4xl font-semibold ${css.tickiffy_title}`}>Tickiffy</h1>
-                  <p className={`w-4/5 ${css.tickiffy_description}`}>Ticket shop! In my opinion, one of the hardest projects, because all of that backend that was put in to it. </p>
+                  <p className={`w-4/5 ${css.tickiffy_description}`}>Ticket shop! In my opinion, one of the hardest projects, because all of that backend that was put in to it. <a className={`text-indigo-900 font-semibold`} href='https://github.com/KkarliskK/tickiffy'>Github page</a></p>
                   <div className={`absolute bottom-0 flex justify-center items-center w-full p-1 ${css.languages_container}`}>
                     <div className={`flex ${css.html}`}><p className={`text-2xl m-1`}><FaHtml5 /></p></div>
                     <div className={`flex ${css.css}`}><p className={`text-2xl m-1`}><FaCss3Alt /></p></div>
@@ -46,7 +47,7 @@ function LandingPage() {
               <div className={`flex flex-col w-full`}>{/*****Laba puse*****/}
                 <div className={`flex flex h-full m-2 transition duration-300 ease-in-out hover:shadow-xl ${css.memorius_container}`}>
                   <h1 className={`text-4xl font-semibold ${css.memorius_title}`}>Memorius</h1>
-                  <p className={`w-4/5 ${css.memorius_description}`}>My first game project! A simple match 2 card game!</p>
+                  <p className={`w-4/5 ${css.memorius_description}`}>My first game project! A simple match 2 card game! <a className={`text-indigo-900 font-semibold`} href='https://github.com/KkarliskK/memorius'>Github page</a></p>
                   <div className={`absolute bottom-0 flex justify-center items-center w-full p-1 ${css.languages_container}`}>
                     <div className={`flex ${css.html}`}><p className={`text-2xl m-1`}><FaHtml5 /></p></div>
                     <div className={`flex ${css.css}`}><p className={`text-2xl m-1`}><FaCss3Alt /></p></div>
@@ -58,7 +59,7 @@ function LandingPage() {
                 </div>
                 <div className={`flex flex h-full m-2 transition duration-300 ease-in-out hover:shadow-xl ${css.coffe_container}`}>
                   <h1 className={`text-4xl font-semibold  ${css.coffe_title}`}>Coffee shop</h1>
-                  <p className={`w-4/5 ${css.coffe_description}`}>Coffee time - a front end project.</p>
+                  <p className={`w-4/5 ${css.coffe_description}`}>Coffee time - a front end project. <a className={`text-indigo-900 font-semibold`} href='https://github.com/KkarliskK/coffe-shop'>Github page</a></p>
                   <div className={`absolute bottom-0 flex justify-center items-center w-full p-1 ${css.languages_container}`}>
                     <div className={`flex ${css.html}`}><p className={`text-2xl m-1`}><FaHtml5 /></p></div>
                     <div className={`flex ${css.css}`}><p className={`text-2xl m-1`}><FaCss3Alt /></p></div>
@@ -76,6 +77,7 @@ function LandingPage() {
         </div>
 
         <About />
+        <Contact />
     </>
   )
 }
