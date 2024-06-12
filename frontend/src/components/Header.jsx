@@ -1,47 +1,114 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
 import { FacebookLogo, GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 
 function Header() {
-    const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    
     document.body.classList.toggle('dark', darkTheme);
-  }, [darkTheme]); 
+  }, [darkTheme]);
 
   function change_theme() {
-    setDarkTheme(!darkTheme); 
+    setDarkTheme(!darkTheme);
+  }
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
   }
 
   return (
-    <>
-        <div className={`flex bg-black w-full h-16 shadow-lg justify-between `}> {/****This is the whole header****/}
-          <div className={``}> <img className={`rounded-full h-full ml-40`} src={logo} /> </div>{/****Logo****/}
-            <div className={`flex `}> {/****Button container*******/}
-              <div className={`flex justify-center items-center`}> {/***This is a single element for header*****/}
-                  <button className={`p-1 m-1 border-2 border-black rounded font-normal text-white`} onClick={change_theme}>{darkTheme ? 'Go light' : 'Go dark'}</button>
-              </div>
-              <div className={`flex justify-center items-center`}>
-                  <button className={`p-1 m-1 border-2 border-black rounded font-normal text-white`}>About Me</button>
-              </div>
-              <div className={`flex justify-center items-center`}>
-                  <button className={`p-1 m-1 border-2 border-black rounded font-normal text-white`}>My Projects</button>
-              </div>
-              <div className={`flex justify-center items-center`}>
-                  <button className={`p-1 m-1 border-2 border-black rounded font-normal text-white`}>Contact Me</button>
-              </div>
-            </div>
-            <div className={`flex mr-36`}> {/****Social media container****/}
-              <div className={`flex justify-center items-center`}>
-                <a className={`m-3`} href='https://www.facebook.com/profile.php?id=100008563723697'><FacebookLogo size={38} color="#f7f7f7" /></a>
-                <a className={`m-3`} href='https://www.linkedin.com/in/k%C4%81rlis-birkavs-83301a26b/'><LinkedinLogo size={38} color="#f7f7f7" /></a>
-                <a className={`m-3`} href='https://www.instagram.com/kkarliskk/'><InstagramLogo size={38} color="#f7f7f7" /></a>
-                <a className={`m-3`} href='https://github.com/KkarliskK/'><GithubLogo size={38} color="#f7f7f7" /></a>
-              </div>
-            </div>
+    <header>
+      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <a href="https://flowbite.com" className="flex items-center">
+            <img className="rounded-full h-16 w-16 mx-2" src={logo} alt="Logo" />
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">KkarliskK</span>
+          </a>
+          <div className="flex items-center lg:order-2">
+            <button
+              onClick={toggleMenu}
+              data-collapse-toggle="mobile-menu-2"
+              type="button"
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-2"
+              aria-expanded={isMenuOpen}
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg className={`${isMenuOpen ? 'hidden' : 'block'} w-6 h-6`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <svg className={`${isMenuOpen ? 'block' : 'hidden'} w-6 h-6`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className={`lg:flex lg:w-auto lg:order-1 ${isMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu-2">
+            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <button
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  onClick={change_theme}
+                >
+                  {darkTheme ? 'Go light' : 'Go dark'}
+                </button>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  My certificates
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Work experience
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Contact Me
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </>
-  )
+      </nav>
+    </header>
+  );
 }
+
 export default Header;

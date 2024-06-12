@@ -16,15 +16,15 @@ function LandingPage() {
           <div className={`${css.circle}`}></div>
           <div className={`flex w-full`}>
             <div className={`flex w-2/6 ml-20 p-4 flex-col`}>
-              <Font family='Oswald'><h1 className={`text-9xl font-semibold`}>Kārlis Birkavs</h1> </Font>
+              <Font family='Oswald'><h1 className={`text-4xl sm:text-9xl font-semibold`}>Kārlis Birkavs</h1> </Font>
               <div className={`flex items-center `}>
-                <p className={`text-4xl m-2`}> <FaHtml5 /></p>
-                <p className={`text-4xl m-2`}> <FaCss3Alt /></p>
-                <p className={`text-4xl m-2`}> <FaReact /></p>
-                <p className={`text-4xl m-2`}> <IoLogoJavascript /></p>
-                <p className={`text-4xl m-2`}> <FaLaravel /></p>
-                <p className={`text-4xl m-2`}> <FaPhp /> </p>
-                <p className={`text-4xl m-2`}> <RiTailwindCssFill /> </p>
+                <p className={`text-2xl sm:text-4xl m-1 sm:m-2`}> <FaHtml5 /></p>
+                <p className={`text-2xl sm:text-4xl m-1 sm:m-2`}> <FaCss3Alt /></p>
+                <p className={`text-2xl sm:text-4xl m-1 sm:m-2`}> <FaReact /></p>
+                <p className={`text-2xl sm:text-4xl m-1 sm:m-2`}> <IoLogoJavascript /></p>
+                <p className={`text-2xl sm:text-4xl m-1 sm:m-2`}> <FaLaravel /></p>
+                <p className={`text-2xl sm:text-4xl m-1 sm:m-2`}> <FaPhp /> </p>
+                <p className={`text-2xl sm:text-4xl m-1 sm:m-2`}> <RiTailwindCssFill /> </p>
               </div>
             </div>
             <div className={`flex justify-center w-2/6 flex-col`}>

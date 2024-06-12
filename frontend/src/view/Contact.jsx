@@ -90,16 +90,16 @@ function Contact() {
                             </div>
                         </div>
 
-                        <form className={`ml-auo space-y-4`} ref={form} onSubmit={sendEmail}>
+                        <form className={`ml-auto space-y-4`} ref={form} onSubmit={sendEmail}>
                             <input 
-                                className={`m-2 w-full p-1 rounded-md py-2.5 px-4 border text-sm outline-[#007bff] `} 
+                                className={`m-2 w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff] `} 
                                 type="text" 
                                 name="user_name"
                                 id="user_email"
                                 placeholder="First name"
                             />
                             <input 
-                                className={`m-2 w-full p-1 rounded-md py-2.5 px-4 border text-sm outline-[#007bff] `} 
+                                className={`m-2 w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff] `} 
                                 type="email" 
                                 name="user_email"
                                 id="user_email"
