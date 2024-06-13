@@ -22,33 +22,43 @@ function Contact() {
     const [slideOut, setSlideOut] = useState(false);
 
     const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('service_8i87ncr', 'template_twdjpmf', form.current)
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          setMessage('🎉Email successfully sent!🎉');
-          setMessageType('success');
-          setShowConfetti(true);
-          setTimeout(() => setShowConfetti(false), 2000);
-          setTimeout(() => setMessageType(null), 5000);
-          setTimeout(() => setSlideOut(true), 4500);
+        e.preventDefault();
+        
+        const formData = new FormData(form.current);
+        const userName = formData.get('user_name').trim();
+        const userEmail = formData.get('user_email').trim();
+        const userMessage = formData.get('message').trim();
 
-          form.current.reset();
-          
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setMessage('Something went wrong, please try again.');
-          setMessageType('error');
-        },
-      );
+        if (!userName || !userEmail || !userMessage) {
+            setMessage('Please fill in all the fields.');
+            setMessageType('error');
+            return;
+        }
+
+        emailjs.sendForm('service_8i87ncr', 'template_twdjpmf', form.current)
+        .then(
+            () => {
+                console.log('SUCCESS!');
+                setMessage('🎉Email successfully sent!🎉');
+                setMessageType('success');
+                setShowConfetti(true);
+                setTimeout(() => setShowConfetti(false), 2000);
+                setTimeout(() => setMessageType(null), 5000);
+                setTimeout(() => setSlideOut(true), 4500);
+
+                form.current.reset();
+            },
+            (error) => {
+                console.log('FAILED...', error.text);
+                setMessage('Something went wrong, please try again.');
+                setMessageType('error');
+            },
+        );
     };
 
     return (
         <>
-            <div className={`flex flex-col w-full h-full sm:mt-72 mb-20 sm:p-2 p-6`}>
+            <div className={`flex flex-col w-full h-full sm:mt-72 sm:mb-20 mb-48  sm:p-2 p-6`}>
                 <div class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
                     <div>
                         <h1 class="text-3xl font-extrabold">Contact Me!</h1>
@@ -95,7 +105,7 @@ function Contact() {
                                 className={`m-2 w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff] `} 
                                 type="text" 
                                 name="user_name"
-                                id="user_email"
+                                id="user_name"
                                 placeholder="First name"
                             />
                             <input 
