@@ -41,8 +41,8 @@ function About() {
 
   return (
       <>
-        <div className={`flex justify-center items-center w-full h-full`}>
-        <div className={`flex w-2/6 h-3/5 p-4 ${firstVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+        <div className={`flex sm:flex-row flex-col justify-center items-center w-full sm:h-full min-h-full sm:mb-2 mb:36`}>
+          <div className={`flex sm:w-2/6 h-3/5 p-4 ${firstVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
             <div className={`flex flex-col w-full`}>
               <div className={`flex justify-center items-center h-full m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.about_container}`}>
                 <h1 className={`text-4xl font-semibold text-center ${css.tickiffy_title}`}>Lives at Latvia, Cēsis</h1>
@@ -58,15 +58,15 @@ function About() {
               </div>
             </div>
           </div>
-          <div className={`flex flex-col justify-center items-center h-full w-4/12 p-4 ${secondVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+          <div className={`flex flex-col justify-center items-center h-full sm:w-4/12 p-4 ${secondVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
             <h1 className={`text-4xl font-semibold mb-32`}>About Me</h1>
             <p className={`text-center font-medium text-lg`}>Hi, I am Kārlis and I live at Latvia, Cēsis. I am 19 years old and still studying at VTDT in 3rd course. 
-              I like to play basketball in my free time, also I my hoby is to work around cars.
+              I like to play basketball in my free time, also I my hobby is to work around cars.
               In fact my future goal is to learn to re-program car computers.
               
             </p>
           </div>
-          <div className={`flex flex-col items-center justify-center w-4/12 p-4 h-full ${thirdVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+          <div className={`flex flex-col items-center justify-center sm:w-4/12 p-4 h-full ${thirdVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
             <div className={`flex justify-center items-center h-1/4 w-full m-2 overflow-hidden`}>
               <img src='https://www.coe.int/documents/11071445/0/0/0080ded5-2ab1-dedf-9ad5-a86c2b575ecc' />
             </div>
