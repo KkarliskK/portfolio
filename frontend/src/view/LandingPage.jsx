@@ -8,11 +8,14 @@ import About from '../view/About';
 import Contact from '../view/Contact';
 import Achievements from '../view/Certificate';
 import Experiences from '../view/Experiences';
+import Header from '../components/Header';
+
 
 
 function LandingPage() {
   return (
     <>
+    <Header />
         <div className={`flex flex-col justify-center items-center w-full h-4/5 shadow-lg `}>
           <div className={`flex w-full sm:flex-row flex-col h-full`}>
             <div className={`flex sm:w-2/6 sm:ml-20 p-4 flex-col justify-center`}>
@@ -77,10 +80,22 @@ function LandingPage() {
           <div className={`${css.wave_animation}`}><CaretDoubleDown size={32} /></div>
         </div>
 
-        <About />
-        <Achievements />
-        <Experiences />
-        <Contact />
+        <div id="about">
+          <About />
+        </div>
+
+        <div id="achievements">
+          <Achievements />
+        </div>
+
+        <div id="experiences">
+          <Experiences />
+        </div>
+
+        <div id="contact">
+          <Contact />
+        </div>
+
     </>
   )
 }

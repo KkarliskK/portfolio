@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   color: rgb(33, 37, 41);
@@ -15,5 +19,10 @@ body.dark{
   color: rgb(172, 200, 229)
 }
 
-
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other content */
+}
 
