@@ -42,7 +42,7 @@ function About() {
   return (
       <>
         <div className={`flex sm:flex-row flex-col justify-center items-center w-full sm:h-full min-h-full sm:mb-2 mb:36`}>
-          <div className={`flex sm:w-2/6 h-3/5 p-4 ${firstVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+          <div className={`flex sm:w-2/6 h-96 p-4 ${firstVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
             <div className={`flex flex-col w-full`}>
               <div className={`flex justify-center items-center h-full m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.about_container}`}>
                 <h1 className={`text-4xl font-semibold text-center ${css.tickiffy_title}`}>Lives at Latvia, Cēsis</h1>
