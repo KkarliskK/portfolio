@@ -32,7 +32,8 @@ function LandingPage() {
             </div>
             <div className={`flex justify-center sm:w-2/6 flex-col`}>
               <div className={`flex items-center`}><CaretRight size={28} /><Font family='Oswald'><p className={`text-xl`}>Student at Vidzemes Tehnoloģiju un Dizaina Tehnikums </p></Font></div>
-              <div className={`flex items-center`}><CaretRight size={28} /><Font family='Oswald'><p className={`text-xl`}>Front end developer </p></Font></div>
+              <div className={`flex items-center`}><CaretRight size={28} /><Font family='Oswald'><p className={`text-xl`}>Full-stack developer </p></Font></div>
+              <div className={`flex items-center`}><CaretRight size={28} /><Font family='Oswald'><p className={`text-xl`}>If I am doing something, I am doing it on 100% </p></Font></div>
             </div>
             <div className={`flex justify-center sm:w-2/6 h-full sm:mr-16`}> {/****Show my latest projects*****/}
               <div className={`flex flex-col w-full justify-center`}>{/*****Kreisa puse*****/}
