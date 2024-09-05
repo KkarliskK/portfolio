@@ -16,8 +16,8 @@ function LandingPage() {
   return (
     <>
     <Header />
-        <div className={`flex flex-col justify-center items-center w-full h-4/5 shadow-lg `}>
-          <div className={`flex w-full sm:flex-row flex-col h-full`}>
+        <div className={`flex flex-col relative justify-center items-center w-full h-full shadow-lg sm:h-4/5`}>
+          <div className={`flex absolute top-28 w-full sm:flex-row flex-col h-full sm:top-10`}>
             <div className={`flex sm:w-2/6 sm:ml-20 p-4 flex-col justify-center`}>
               <Font family='Oswald'><h1 className={`text-5xl sm:text-9xl font-semibold`}>Kārlis Birkavs</h1> </Font>
               <div className={`flex items-center`}>
@@ -35,7 +35,7 @@ function LandingPage() {
               <div className={`flex items-center`}><CaretRight size={28} /><Font family='Oswald'><p className={`text-xl`}>Full-stack developer </p></Font></div>
               <div className={`flex items-center`}><CaretRight size={28} /><Font family='Oswald'><p className={`text-xl`}>If I am doing something, I am doing it on 100% </p></Font></div>
             </div>
-            <div className={`flex justify-center sm:w-2/6 h-full sm:mr-16`}> {/****Show my latest projects*****/}
+            <div className={`flex justify-center sm:w-2/6 h-3/5 sm:mr-16 sm:h-full `}> {/****Show my latest projects*****/}
               <div className={`flex flex-col w-full justify-center`}>{/*****Kreisa puse*****/}
                 <div className={`flex justify-center items-center h-3/6 m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.tickiffy_container}`}>
                   <h1 className={`sm:text-4xl text-xl font-semibold ${css.tickiffy_title}`}>Tickiffy</h1>
@@ -75,7 +75,7 @@ function LandingPage() {
             </div>
           </div>
         </div>
-        <div className={`flex w-full justify-center items-center h-1/6`}> {/****About Me small section***/}
+        <div className={`flex w-full justify-center items-center h-1/6 `}> {/****About Me small section***/}
           <div className={`${css.wave_animation}`}><CaretDoubleDown size={32} /></div>
             <button className={`bg-inherit border-0 m-5 p-2`}><h2 className={`text-2xl font-semibold`}>About me</h2></button>
           <div className={`${css.wave_animation}`}><CaretDoubleDown size={32} /></div>
@@ -85,13 +85,13 @@ function LandingPage() {
           <About />
         </div>
 
-        <div id="achievements">
+        {/* <div id="achievements">
           <Achievements />
         </div>
 
         <div id="experiences">
           <Experiences />
-        </div>
+        </div> */}
 
         <div id="contact">
           <Contact />
