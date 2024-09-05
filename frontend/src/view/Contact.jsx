@@ -30,7 +30,7 @@ function Contact() {
         const userMessage = formData.get('message').trim();
 
         if (!userName || !userEmail || !userMessage) {
-            setMessage('Please fill in all the fields.');
+            setMessage('Lūdzu aizpildiet visus laukumus.');
             setMessageType('error');
             return;
         }
@@ -38,8 +38,8 @@ function Contact() {
         emailjs.sendForm('service_8i87ncr', 'template_twdjpmf', form.current)
         .then(
             () => {
-                console.log('SUCCESS!');
-                setMessage('🎉Email successfully sent!🎉');
+                //console.log('SUCCESS!');
+                setMessage('🎉e-pasts veiksmīgi nosūtīts!🎉');
                 setMessageType('success');
                 setShowConfetti(true);
                 setTimeout(() => setShowConfetti(false), 2000);
@@ -49,8 +49,8 @@ function Contact() {
                 form.current.reset();
             },
             (error) => {
-                console.log('FAILED...', error.text);
-                setMessage('Something went wrong, please try again.');
+                //console.log('FAILED...', error.text);
+                setMessage('Kaut kas nogāja greizi, lūdzu mēģiniet vēlreiz.');
                 setMessageType('error');
             },
         );
@@ -61,17 +61,17 @@ function Contact() {
             <div className={`flex flex-col w-full h-full sm:mt-72 sm:mb-20 mb-48  sm:p-2 p-6`}>
                 <div class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
                     <div>
-                        <h1 class="text-3xl font-extrabold">Contact Me!</h1>
-                        <p class="text-sm text-gray-400 mt-3">Have some big idea or project to develop and need help? Then reach out I'd love to hear about your project and provide help.</p>
+                        <h1 class="text-3xl font-extrabold">Sazinies ar mani!</h1>
+                        <p class="text-sm text-gray-400 mt-3">Vai Tev ir kāda projekta ideja vai vienkārši nepieciešama palīdzība? Tad droši sazinies ar mani, es būšu priecīgs palīdzēt!</p>
                         <div class="mt-12">
-                            <h2 class="text-lg font-extrabold">Email</h2>
+                            <h2 class="text-lg font-extrabold">e-pasts</h2>
                             <ul class="mt-3">
                                 <li class="flex items-center">
                                     <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                         <MdEmail size={32} color='#007bff' />
                                     </div>
                                     <a href="mailto:karlisbirk@gmail.com" class="text-[#007bff] text-sm ml-3">
-                                        <small class="block">Mail</small>
+                                        <small class="block">e-pasts</small>
                                         <strong>karlisbirk@gmail.com</strong>
                                     </a>
                                 </li>
@@ -79,7 +79,7 @@ function Contact() {
                         </div>
 
                         <div class="mt-12">
-                            <h2 class="text-lg font-extrabold">Social links</h2>
+                            <h2 class="text-lg font-extrabold">Sociālie tīkli</h2>
                                 <ul class="flex mt-3 space-x-4">
                                     <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                         <a href="https://www.facebook.com/profile.php?id=100008563723697">
@@ -106,23 +106,23 @@ function Contact() {
                                 type="text" 
                                 name="user_name"
                                 id="user_name"
-                                placeholder="First name"
+                                placeholder="Vārds"
                             />
                             <input 
                                 className={`m-2 w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff] `} 
                                 type="email" 
                                 name="user_email"
                                 id="user_email"
-                                placeholder="Email" 
+                                placeholder="e-pasts" 
                             />
                             <input 
                                 className={`m-2 w-full h-32 rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]`} 
                                 type="text" 
                                 name="message"
                                 id='message'
-                                placeholder="Message ..." 
+                                placeholder="Ziņa ..." 
                             />
-                            <button className={`text-white bg-[#007bff] hover:bg-blue-600 font-semibold rounded-md text-sm px-4 py-2.5 w-full`} type="submit">Submit</button>
+                            <button className={`text-white bg-[#007bff] hover:bg-blue-600 font-semibold rounded-md text-sm px-4 py-2.5 w-full`} type="submit">Sūtīt</button>
                             {message && <div className={`m-2 w-full p-1 rounded flex justify-center items-center text-lg font-semibold transition-opacity duration-500 px-4 border  ${slideOut ? css['slide-out'] : ''} ${messageType === 'success' ? css['bg-green-500'] + ' ' + css['slide-in'] : css['bg-red-500'] + ' ' + css['slide-in']}`}>{message}</div>}
                             <div className="confetti-container">
                                 <Confetti active={showConfetti} config={config} />

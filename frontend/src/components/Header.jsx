@@ -54,7 +54,7 @@ function Header() {
       <div className="flex justify-between items-center mx-auto max-w-screen-xl flex-col">
         <a href="/" className="flex items-center">
           <img className="rounded-full h-16 w-16 mx-2" src={logo} alt="Logo" />
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">KkarliskK</span>
+          <span className="self-center text-xl font-semibold whitespace-nowrap text-black">KkarliskK</span>
         </a>
           <button
             onClick={toggleMenu}
@@ -88,7 +88,7 @@ function Header() {
                 className={`block py-2 pr-4 pl-3 ${activeSection === 'home' ? 'font-semibold text-primary-700' : 'text-gray-700'} lg:text-black lg:text-lg dark:text-white lg:p-0`}
                 aria-current={activeSection === 'home' ? 'page' : undefined}
               >
-                Home
+                Sākums
               </a>
             </li>
             <li>
@@ -96,7 +96,7 @@ function Header() {
                 className={`block py-2 pr-4 pl-3 ${darkTheme ? 'font-semibold text-black' : 'text-gray-700'} lg:text-black lg:text-lg dark:text-white lg:p-0`}
                 onClick={changeTheme}
               >
-                {darkTheme ? 'Go light' : 'Go dark'}
+                {darkTheme ? 'Gaišais režīms' : 'Tumšais režīms'}
               </button>
             </li>
             <li>
@@ -104,7 +104,7 @@ function Header() {
                 href="#about"
                 className={`block py-2 pr-4 pl-3 ${activeSection === 'about' ? 'font-semibold text-primary-700' : 'text-gray-700'} lg:text-black lg:text-lg dark:text-white lg:p-0`}
               >
-                About Me
+                Par mani
               </a>
             </li>
             <li>
@@ -112,7 +112,7 @@ function Header() {
                 href="#contact"
                 className={`block py-2 pr-4 pl-3 ${activeSection === 'contact' ? 'font-semibold text-primary-700' : 'text-gray-700'} lg:text-black lg:text-lg dark:text-white lg:p-0`}
               >
-                Contact Me
+                Sazinies ar mani
               </a>
             </li>
           </ul>

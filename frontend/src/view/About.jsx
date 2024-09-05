@@ -45,24 +45,22 @@ function About() {
           <div className={`flex sm:w-2/6 h-96 p-4 ${firstVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
             <div className={`flex flex-col w-full`}>
               <div className={`flex justify-center items-center h-full m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.about_container}`}>
-                <h1 className={`text-4xl font-semibold text-center ${css.tickiffy_title}`}>Lives at Latvia, Cēsis</h1>
-                <p className={`w-4/5 ${css.tickiffy_description}`}>A beautiful country and city. Lots of historical places to visit. To read more: <a href="https://www.cesis.lv/lv/" className={`text-indigo-900 font-semibold`}>Visit Cesis</a> </p>
+                <h1 className={`text-4xl font-semibold text-center ${css.tickiffy_title}`}>Dzīvoju Latvijā, Cēsīs</h1>
+                <p className={`w-4/5 ${css.tickiffy_description}`}>Skaista valsts un pilsēta. Daudz vēsturisku vietu ko apskatīt. Lasīt vairāk: <a href="https://www.cesis.lv/lv/" className={`text-indigo-900 font-semibold`}>Visit Cesis</a> </p>
               </div>
             </div>
             <div className={`flex flex-col w-full`}>{/*****Laba puse*****/}
               <div className={`flex justify-center items-center h-full m-2 transition duration-300 ease-in-out hover:shadow-xl ${css.memorius_container}`}>
-                <h1 className={`text-4xl font-semibold text-center `}>19 Years old</h1>
+                <h1 className={`text-4xl font-semibold text-center `}>19 gadus vecs</h1>
               </div>
               <div className={`flex justify-center items-center p-2 h-full m-2 transition duration-300 ease-in-out hover:shadow-xl ${css.coffe_container}`}>
-                <h1 className={`text-4xl font-semibold text-center`}>Student at VTDT</h1>
+                <h1 className={`text-4xl font-semibold text-center`}>Mācos VTDT</h1>
               </div>
             </div>
           </div>
           <div className={`flex flex-col justify-center items-center h-full sm:w-4/12 p-4 ${secondVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
-            <h1 className={`text-4xl font-semibold mb-32`}>About Me</h1>
-            <p className={`text-center font-medium text-lg`}>Hi, I am Kārlis and I live at Latvia, Cēsis. I am 19 years old and still studying at VTDT in 3rd course. 
-              I like to play basketball in my free time, also I my hobby is to work around cars.
-              In fact my future goal is to learn to re-program car computers.
+            <h1 className={`text-4xl font-semibold mb-32`}>Par mani</h1>
+            <p className={`text-center font-medium text-lg`}>
               
             </p>
           </div>
