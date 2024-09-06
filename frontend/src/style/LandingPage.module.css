@@ -63,11 +63,11 @@
 }
 
 .memorius_container:hover .memorius_title {
-  top: 10%; /* Moves up when hovered */
+  top: 20%; /* Moves up when hovered */
 }
 
 .memorius_container:hover .memorius_description {
-  top: 25%; /* Moves into view when hovered */
+  top: 35%; /* Moves into view when hovered */
   opacity: 1; /* Makes description visible */
 }
 

@@ -42,26 +42,31 @@ function About() {
   return (
       <>
         <div className={`flex sm:flex-row flex-col justify-center items-center w-full sm:h-full min-h-full sm:mb-2 mb:36`}>
-          <div className={`flex sm:w-2/6 h-96 p-4 ${firstVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
-            <div className={`flex flex-col w-full`}>
+          <div className={`flex sm:w-2/6 h-96 p-4 flex-col sm:flex-row ${firstVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+            <div className={`flex flex-col w-full h-4/5 sm:h-full`}>
               <div className={`flex justify-center items-center h-full m-2 transition duration-300 ease-in-out hover:shadow-lg ${css.about_container}`}>
-                <h1 className={`text-4xl font-semibold text-center ${css.tickiffy_title}`}>Dzīvoju Latvijā, Cēsīs</h1>
+                <h1 className={`text-4xl font-semibold text-center p-2 ${css.tickiffy_title}`}>Dzīvoju Latvijā, Cēsīs</h1>
                 <p className={`w-4/5 ${css.tickiffy_description}`}>Skaista valsts un pilsēta. Daudz vēsturisku vietu ko apskatīt. Lasīt vairāk: <a href="https://www.cesis.lv/lv/" className={`text-indigo-900 font-semibold`}>Visit Cesis</a> </p>
               </div>
             </div>
-            <div className={`flex flex-col w-full`}>{/*****Laba puse*****/}
+            <div className={`flex flex-col w-full h-4/5 sm:h-full`}>{/*****Laba puse*****/}
               <div className={`flex justify-center items-center h-full m-2 transition duration-300 ease-in-out hover:shadow-xl ${css.memorius_container}`}>
-                <h1 className={`text-4xl font-semibold text-center `}>19 gadus vecs</h1>
+                <h1 className={`text-4xl font-semibold text-center p-2 `}>19 gadus vecs</h1>
               </div>
               <div className={`flex justify-center items-center p-2 h-full m-2 transition duration-300 ease-in-out hover:shadow-xl ${css.coffe_container}`}>
-                <h1 className={`text-4xl font-semibold text-center`}>Mācos VTDT</h1>
+                <h1 className={`text-4xl font-semibold text-center p-2`}>Mācos VTDT</h1>
               </div>
             </div>
           </div>
           <div className={`flex flex-col justify-center items-center h-full sm:w-4/12 p-4 ${secondVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
             <h1 className={`text-4xl font-semibold mb-32`}>Par mani</h1>
             <p className={`text-center font-medium text-lg`}>
-              
+              Esmu Kārlis, 19 gadus vecs, no Cēsīm. Motivēts, labi protu sastrādāties komandā un vienmēr esmu gatavs mācīties ko jaunu. 
+              Man ir radoša domāšana, kad projekta ietvaros tas ir nepieciešams. Pieredzējis programmēt mājaslapas jau 3 gadus. 
+              Vēl joprojām mācos Vidzemes Tehnoloģiju un dizaina tehnikumā kā programmētājs 4. kursā.
+              Protu dažādas programmēšanas tehnoloģijas un bibliotēkas kā piemēram: HTML, CSS, JS, PHP, React, Laravel, TailwindCss.
+              Protu apieties arī ar Microsoft Word, Excel un Powerpoint.
+              Ir pieredze lietot arī dizainprogrammas Figma un Adoble Photoshop
             </p>
           </div>
           <div className={`flex flex-col items-center justify-center sm:w-4/12 p-4 h-full ${thirdVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
