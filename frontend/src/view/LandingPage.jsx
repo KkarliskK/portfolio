@@ -53,7 +53,7 @@ function LandingPage() {
                 <div className={`flex flex h-2/6 m-2 transition duration-300 ease-in-out hover:shadow-xl ${css.memorius_container}`}>
                   <h1 className={`sm:text-4xl text-xl font-semibold ${css.memorius_title}`}>Memorius</h1>
                   <p className={`w-4/5 ${css.memorius_description}`}>Mans pirmais spēles projekts! Kāršu minēšanas spēle. <a className={`text-indigo-900 font-semibold`} href='https://github.com/KkarliskK/memorius'>Github lapa</a></p>
-                  <div className={`absolute bottom-0 flex justify-center items-center w-full p-1 ${css.languages_container}`}>
+                  <div className={`absolute bottom-0 flex justify-center items-center w-full p-1  ${css.languages_container}`}>
                     <div className={`flex ${css.html}`}><p className={`sm:text-2xl text-xl sm:m-1`}><FaHtml5 /></p></div>
                     <div className={`flex ${css.css}`}><p className={`sm:text-2xl text-xl sm:m-1`}><FaCss3Alt /></p></div>
                     <div className={`flex ${css.js}`}><p className={`sm:text-2xl text-xl sm:m-1`}><IoLogoJavascript /></p></div>

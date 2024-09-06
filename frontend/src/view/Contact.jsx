@@ -58,8 +58,8 @@ function Contact() {
 
     return (
         <>
-            <div className={`flex flex-col w-full h-full sm:mt-72 sm:mb-20 mb-48  sm:p-2 p-6`}>
-                <div class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
+            <div className={`flex flex-col w-full h-full sm:mt-72 sm:mb-20 mb-48  sm:p-2 p-6 `}>
+                <div className={`grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]`}>
                     <div>
                         <h1 class="text-3xl font-extrabold">Sazinies ar mani!</h1>
                         <p class="text-sm text-gray-400 mt-3">Vai Tev ir kāda projekta ideja vai vienkārši nepieciešama palīdzība? Tad droši sazinies ar mani, es būšu priecīgs palīdzēt!</p>
@@ -94,6 +94,11 @@ function Contact() {
                                     <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                         <a href="https://www.instagram.com/kkarliskk/">
                                             <InstagramLogo size={32} color="#007bff" />
+                                        </a>
+                                    </li>
+                                    <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                                        <a href="https://github.com/KkarliskK/">
+                                            <GithubLogo size={32} color="#007bff" />
                                         </a>
                                     </li>
                                 </ul>
